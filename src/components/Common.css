@@ -1,0 +1,70 @@
+.whiteChef {
+  width: 50%;
+  height: 100%;
+  background-color: #000;
+}
+
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  gap: 20px;
+}
+
+.cardItem {
+  width: 100%;
+  height: 100%;
+  /* height: 15em; */
+  /* height: auto; */
+  position: relative;
+}
+
+.cardItem .front {
+  width: 100%;
+  height: 100%;
+}
+.cardItem .front img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.cardItem .back {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(217, 217, 217, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+}
+.cardItem a {
+  text-decoration: none;
+  font-size: 0.875em;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.cardItem .back p {
+  margin: 0;
+}
+.cardItem .back .name {
+  font-size: 2em;
+  font-weight: 900;
+}
+.cardItem .back .detail {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.cardItem:hover .back {
+  opacity: 1;
+}

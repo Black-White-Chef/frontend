@@ -1,5 +1,5 @@
-import './Header.css';
-import logoImg from '../../assets/chef/bw-chef-logo.png';
+import "./Header.css";
+import logoImg from "../../assets/Logo.png";
 
 export default function Header() {
   return (
