@@ -1,11 +1,23 @@
+import { useEffect } from "react";
 import "./Common.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { whiteData } from "../utills/white";
 
 function ProfileWhite() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="cardList whiteChef">
       {whiteData.chef.map((chef) => (
-        <div key={chef.name} className="cardItem white">
+        <div
+          key={chef.name}
+          className="cardItem white"
+          data-aos="fade-up-right"
+          data-aos-duration="1500"
+        >
           <div className="front">
             <img src={chef.image} alt="프로필" />
           </div>
