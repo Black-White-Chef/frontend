@@ -1,38 +1,71 @@
-import Header from "./components/Header/Header.jsx";
-import { blackData } from "./utills/black.js";
-import { whiteData } from "./utills/white.js";
+import Header from './components/Header/Header.jsx';
+import { blackData } from './utills/black.js';
+import { whiteData } from './utills/white.js';
+import { judgeData } from './utills/judge.js';
+import './App.css';
+import Slider from './components/Footer/Slider.jsx';
+import Modal from './components/Modal/Modal.jsx';
 
 function App() {
-  whiteData.chef.forEach((item) => {
-    console.log(item);
-  });
-
   return (
     <>
       <Header />
-      <div>
-        <h1>{blackData.chef[0].name}</h1>
-        <img src={blackData.chef[0].image} alt={blackData.chef[0].name} />
-        <div>{blackData.chef[0].detail}</div>
-        <a
-          href={blackData.chef[0].restaurant}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          식당 링크
-        </a>
+      <div className="judgeContainer">
+        <div className="jchef">
+          {judgeData.chef.map((item, index) => (
+            <div className="chefList" key={index}>
+              <div className="imageContainer">
+                <img src={item.image} alt={item.name} />
+                <div className="mouse">
+                  <h1>{item.name}</h1>
+                  <p>{item.detail}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {whiteData.chef.map((item) => (
-        <>
-          <h1>{item.name}</h1>
-          <img src={item.image} alt="" />
-          <div>{item.detail}</div>
-          <a href={item.restaurant} target="_blank" rel="noopener noreferrer">
-            식당 링크
-          </a>
-        </>
-      ))}
+      <div className="container">
+        <div className="wchef">
+          {whiteData.chef.map((item, index) => (
+            <div className="chefList" key={index}>
+              <div className="imageContainer">
+                <img src={item.image} alt={item.name} />
+                <div
+                  className="mouse"
+                  onClick={() => window.open(item.restaurant)}
+                >
+                  <h1>{item.name}</h1>
+                  <p>{item.detail}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="bchef">
+          {blackData.chef.map((item, index) => (
+            <div className="chefList" key={index}>
+              <div className="imageContainer">
+                <img src={item.image} alt={item.name} />
+                <div
+                  className="mouse"
+                  onClick={() => window.open(item.restaurant)}
+                >
+                  <h1>{item.name}</h1>
+                  <p>{item.detail}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <section>
+        <Modal />
+      </section>
+      <footer>
+        <Slider />
+      </footer>
     </>
   );
 }

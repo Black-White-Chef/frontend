@@ -1,0 +1,115 @@
+.judgeContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.jchef {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 21px;
+  width: 50%;
+  padding-left: 394px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.wchef,
+.bchef {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  width: 50%;
+  padding-left: 35px;
+}
+
+.chefList {
+  position: relative;
+  cursor: pointer;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.imageContainer img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.mouse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: 400px;
+  background-color: rgba(42, 40, 40, 0.618);
+  color: white;
+  opacity: 0;
+}
+
+.imageContainer:hover .mouse {
+  opacity: 1;
+}
+
+.mouse h1 {
+  margin: 10px 15px;
+}
+
+.mouse p {
+  margin: 10px 15px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .wchef,
+  .bchef {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    width: 50%;
+    padding-left: 0px;
+  }
+
+  .jchef {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .imageContainer img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .mouse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 300px;
+    background-color: rgba(42, 40, 40, 0.618);
+    color: white;
+    opacity: 0;
+  }
+}
