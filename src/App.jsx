@@ -1,10 +1,10 @@
-import Header from './components/Header/Header.jsx';
-import { blackData } from './utills/black.js';
-import { whiteData } from './utills/white.js';
-import { judgeData } from './utills/judge.js';
-import './App.css';
-import Slider from './components/Footer/Slider.jsx';
-import Modal from './components/Modal/Modal.jsx';
+import Header from "./components/Header/Header.jsx";
+import { blackData } from "./utills/black.js";
+import { whiteData } from "./utills/white.js";
+import { judgeData } from "./utills/judge.js";
+import "./App.css";
+import Slider from "./components/Footer/Slider.jsx";
+import Modal from "./components/Modal/Modal.jsx";
 
 function App() {
   return (
@@ -66,6 +66,9 @@ function App() {
       <footer>
         <Slider />
       </footer>
+
+      <div>안녕하세요</div>
+      <div>반가워요</div>
     </>
   );
 }
