@@ -1,0 +1,46 @@
+.modalContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.modal {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  height: 200px;
+  width: 300px;
+  background-color: rgba(127, 212, 255, 0.548);
+}
+
+.submitForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nicknameLabel {
+  margin: 10px 10px;
+}
+
+.nicknameInput {
+  width: 50px;
+  height: 20px;
+}
+
+.commentLabel {
+  margin: 10px 10px;
+}
+
+.commentInput {
+  width: 80px;
+  height: 40px;
+}
+
+.sbtn {
+  margin-left: 15px;
+}
+
+.sbtn:hover {
+  background-color: #896fc7;
+}
