@@ -20,14 +20,13 @@ function App() {
 
       <div className="jchef">
         {judgeData.chef.map((item, index) => (
-          <div
-            className="chefList"
-            key={index}
-            data-aos="flip-left"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
-          >
-            <div className="imageContainer">
+          <div className="chefList" key={index}>
+            <div
+              className="imageContainer"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
               <img src={item.image} alt={item.name} />
               <div className="mouse">
                 <h1>{item.name}</h1>
@@ -62,13 +61,12 @@ function App() {
         </div>
         <div className="bchef">
           {blackData.chef.map((item, index) => (
-            <div
-              className="chefList black"
-              key={index}
-              data-aos="fade-up-left"
-              data-aos-duration="2000"
-            >
-              <div className="imageContainer">
+            <div className="chefList black" key={index}>
+              <div
+                className="imageContainer"
+                data-aos="fade-up-left"
+                data-aos-duration="2000"
+              >
                 <img src={item.image} alt={item.name} />
                 <div
                   className="mouse"
