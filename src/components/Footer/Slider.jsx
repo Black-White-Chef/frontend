@@ -1,7 +1,7 @@
 import './Slider.scss';
 
 const texts = [
-  'Text 1',
+  'Text 11111111111111111111111111111111111111',
   'Text 2',
   'Text 3',
   'Text 4',
@@ -17,14 +17,25 @@ const texts = [
 
 export default function Slider() {
   return (
-    <div className="slider">
-      <div className="slide-track">
-        {texts.concat(texts).map((text, index) => (
-          <div className="slider" key={index}>
-            {text}
-          </div>
-        ))}
+    <>
+      <div className="slider">
+        <div className="slide-track-t">
+          {texts.concat(texts).map((text, index) => (
+            <div className="slider" key={index}>
+              {text}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+      <div className="slider">
+        <div className="slide-track-b">
+          {texts.concat(texts).map((text, index) => (
+            <div className="slider" key={index}>
+              {text}
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }

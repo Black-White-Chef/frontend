@@ -2,13 +2,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 150px;
   background: linear-gradient(to right, black 50%, white 50%);
   margin: 0;
   padding: 0;
 }
 
 .header img {
-  height: 100px;
+  height: 150px;
   width: auto;
+}
+
+.Lbtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: rgba(128, 128, 128, 0.784);
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.Lbtn:hover {
+  background-color: #cdcdcd;
 }
