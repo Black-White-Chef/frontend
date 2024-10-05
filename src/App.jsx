@@ -8,6 +8,7 @@ import Slider from "./components/Footer/Slider.jsx";
 import Modal from "./components/Modal/Modal.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import FeedbackModal from "./components/FeedbackModal/FeedbackModal.jsx";
 
 function App() {
   useEffect(() => {
@@ -17,7 +18,7 @@ function App() {
   return (
     <>
       <Header />
-
+      <FeedbackModal />
       <div className="jchef">
         {judgeData.chef.map((item, index) => (
           <div className="chefList" key={index}>
@@ -31,6 +32,7 @@ function App() {
               <div className="mouse">
                 <h1>{item.name}</h1>
                 <p>{item.detail}</p>
+                <div>안녕하세요</div>
               </div>
             </div>
           </div>
@@ -61,12 +63,13 @@ function App() {
         </div>
         <div className="bchef">
           {blackData.chef.map((item, index) => (
-            <div className="chefList black" key={index}>
-              <div
-                className="imageContainer"
-                data-aos="fade-up-left"
-                data-aos-duration="2000"
-              >
+            <div
+              className="chefList black"
+              key={index}
+              data-aos="fade-up-left"
+              data-aos-duration="2000"
+            >
+              <div className="imageContainer">
                 <img src={item.image} alt={item.name} />
                 <div
                   className="mouse"
