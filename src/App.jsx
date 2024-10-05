@@ -32,7 +32,6 @@ function App() {
               <div className="mouse">
                 <h1>{item.name}</h1>
                 <p>{item.detail}</p>
-                <div>안녕하세요</div>
               </div>
             </div>
           </div>
