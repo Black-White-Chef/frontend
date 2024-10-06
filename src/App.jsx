@@ -55,6 +55,7 @@ function App() {
                 >
                   <h1>{item.name}</h1>
                   <p>{item.detail}</p>
+                  <p className="infoMsg">{whiteData.info}</p>
                 </div>
               </div>
             </div>
@@ -76,6 +77,7 @@ function App() {
                 >
                   <h1>{item.name}</h1>
                   <p>{item.detail}</p>
+                  <p className="infoMsg">{blackData.info}</p>
                 </div>
               </div>
             </div>
