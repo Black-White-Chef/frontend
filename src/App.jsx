@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header/Header.jsx";
 import { blackData } from "./utills/black.js";
 import { whiteData } from "./utills/white.js";
@@ -9,16 +9,25 @@ import Modal from "./components/Modal/Modal.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import FeedbackModal from "./components/FeedbackModal/FeedbackModal.jsx";
+import EFeedbackModal from "./components/FeedbackModal/EFeedbackModal.jsx";
 
 function App() {
+  const [isKorean, setIsKorean] = useState(true);
   useEffect(() => {
     AOS.init();
   }, []);
 
+  const setLanguage = () => {
+    setIsKorean(!isKorean);
+    // console.log(isKorean);
+  };
+  console.log(isKorean);
+
   return (
     <>
-      <Header />
-      <FeedbackModal />
+      <Header setLanguage={setLanguage} />
+      {isKorean ? <FeedbackModal /> : <EFeedbackModal />}
+
       <div className="jchef">
         {judgeData.chef.map((item, index) => (
           <div className="chefList" key={index}>
@@ -30,8 +39,8 @@ function App() {
             >
               <img src={item.image} alt={item.name} />
               <div className="mouse">
-                <h1>{item.name}</h1>
-                <p>{item.detail}</p>
+                <h1>{isKorean ? item.name : item.Ename}</h1>
+                <p>{isKorean ? item.detail : item.Edetail}</p>
               </div>
             </div>
           </div>
@@ -53,9 +62,11 @@ function App() {
                   className="mouse"
                   onClick={() => window.open(item.restaurant)}
                 >
-                  <h1>{item.name}</h1>
-                  <p>{item.detail}</p>
-                  <p className="infoMsg">{whiteData.info}</p>
+                  <h1>{isKorean ? item.name : item.Ename}</h1>
+                  <p>{isKorean ? item.detail : item.Edetail}</p>
+                  <p className="infoMsg">
+                    {isKorean ? whiteData.info : whiteData.Einfo}
+                  </p>
                 </div>
               </div>
             </div>
@@ -73,11 +84,17 @@ function App() {
                 <img src={item.image} alt={item.name} />
                 <div
                   className="mouse"
-                  onClick={() => window.open(item.restaurant)}
+                  onClick={() => {
+                    if (!item.restaurant) return;
+
+                    window.open(item.restaurant);
+                  }}
                 >
-                  <h1>{item.name}</h1>
-                  <p>{item.detail}</p>
-                  <p className="infoMsg">{blackData.info}</p>
+                  <h1>{isKorean ? item.name : item.Ename}</h1>
+                  <p>{isKorean ? item.detail : item.Edetail}</p>
+                  <p className="infoMsg">
+                    {isKorean ? blackData.info : blackData.Einfo}
+                  </p>
                 </div>
               </div>
             </div>
