@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import "./FeedbackModal.css";
 
-export default function FeedbackModal() {
+export default function EFeedbackModal() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [feedback, setFeedback] = useState("");
 
@@ -38,15 +38,15 @@ export default function FeedbackModal() {
       {isModalOpen && (
         <div className="backdrop">
           <div className="feedbackContainer">
-            <h3>이 사이트에 대한 피드백을 입력해 주세요!</h3>
-            <p>피드백을 입력해 주시면 큰 힘이 됩니다.</p>
+            <h3>Please provide feedback on this site!</h3>
+            <p>Your feedback would be greatly appreciated.</p>
             <form className="feedbackFrom" onSubmit={handleFeedback}>
               <textarea
                 className="feedbackInput"
                 type="text"
                 value={feedback}
                 onChange={(e) => setFeedback(e.target.value)}
-                placeholder="피드백을 입력해 주세요"
+                placeholder="Please enter your feedback."
                 required
               ></textarea>
               <button className="FeedbackSbtn" type="submit">

@@ -2,14 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
-  background: linear-gradient(to right, black 50%, white 50%);
-  margin: 0;
-  padding: 0;
+  /* background: linear-gradient(to right, black 50%, white 50%);
+  margin: 0; */
+  padding: 2em;
 }
 
 .header img {
-  height: 150px;
+  height: 9em;
   width: auto;
 }
 
@@ -17,7 +16,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 18px;
+  font-size: 1.125em;
   color: rgba(128, 128, 128, 0.784);
   background-color: #fff;
   border: none;
