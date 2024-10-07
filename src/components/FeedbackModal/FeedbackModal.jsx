@@ -24,7 +24,7 @@ export default function FeedbackModal() {
 
   const handleFeedback = (e) => {
     e.preventDefault();
-    console.log("Feedback:", feedback);
+
     axios.post(`${API_URL}/feedbacks/`, {
       feedback,
     });
