@@ -15,6 +15,7 @@ export default function Header({ setLanguage }) {
       <header className="header">
         <img src={logoImg} alt="logo-Img" />
       </header>
+      <p className="produceBy">출처: Netflix, Youtube</p>
       <button className="Lbtn" onClick={LanguageTbtn}>
         {isKorean ? "English" : "한국어"}
       </button>
