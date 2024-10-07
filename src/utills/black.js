@@ -25,7 +25,7 @@ export const blackData = {
   chef: [
     {
       name: "간귀",
-      Ename: "Kan-gwi",
+      Ename: "God of Seasoning",
       image: b1Img,
       detail:
         "간을 귀신같이 맞추는 미슐랭 2스타 정식당, DOTZ 출현. 현 키보 에다마메 오너 셰프",
@@ -38,7 +38,7 @@ export const blackData = {
     },
     {
       name: "고기 깡패",
-      Ename: "Meat Gangster",
+      Ename: "Meat Master",
       image: b2Img,
       detail:
         "고기요리 전문 셰프. Spotted pig picholine 등 뉴욕 미슐랭 레스토랑 근무. 전 S-food 컨설턴트. 현 군몽 오너셰프",
@@ -51,17 +51,17 @@ export const blackData = {
     },
     {
       name: "급식 대가",
-      Ename: "School Meal Master",
+      Ename: "Master of School Meals",
       image: b3Img,
       detail: "15년 경력의 경남 양산 하북초등학교 급식 조리사",
       Edetail:
         "A school meal chef with 15 years of experience at Habuk Elementary School in Yangsan, Gyeongnam.",
-      restaurant: "",
-      Erestaurant: "",
+      restaurant: "https://www.youtube.com/@SchoolChef",
+      Erestaurant: "https://www.youtube.com/@SchoolChef",
     },
     {
       name: "나폴리 맛피아",
-      Ename: "Napoli Mafia",
+      Ename: "Napoli Matfia",
       image: b4Img,
       detail:
         "이탈리아 본토 느낌을 최대한 살린 핫한 생명 파스타바 비아톨레도 오너 셰프",
@@ -74,7 +74,7 @@ export const blackData = {
     },
     {
       name: "만찢남",
-      Ename: "Manzzitnam",
+      Ename: "Comic Book Chef",
       image: b5Img,
       detail: "만화책에서 영감을 얻어 요리를 시작한 비전공자",
       Edetail:
@@ -86,7 +86,7 @@ export const blackData = {
     },
     {
       name: "반찬 셰프",
-      Ename: "Banchan Chef",
+      Ename: "Side Dish Chef",
       image: b6Img,
       detail: "스페인 미슐랭 출신의 핫판 반찬 외식 브랜드 마마리마켓 오너셰프",
       Edetail:
@@ -98,7 +98,7 @@ export const blackData = {
     },
     {
       name: "불꽃 남자",
-      Ename: "Flame Man",
+      Ename: "Chef Spark",
       image: b7Img,
       detail: "1인 이탈리안 레스토랑 비스트로 스파크 오너 셰프",
       Edetail: "Owner-chef of Bistro Spark, a one-man Italian restaurant.",
@@ -107,7 +107,7 @@ export const blackData = {
     },
     {
       name: "셀럽의 셰프",
-      Ename: "Chef to Celebrities",
+      Ename: "Celebrities' Chef",
       image: b8Img,
       detail: "셀러브리티들의 핫한 맛집으로 유명한 Buto 오너 셰프",
       Edetail: "Owner-chef of Buto, a trendy celebrity hotspot restaurant.",
@@ -118,7 +118,7 @@ export const blackData = {
     },
     {
       name: "승우아빠",
-      Ename: "Seungwoo Dad",
+      Ename: "Seung-woo's Dad",
       image: b9Img,
       detail: "138만 구독자를 가진 요리 유튜버",
       Edetail: "A cooking YouTuber with 1.38 million subscribers.",
@@ -139,7 +139,7 @@ export const blackData = {
     },
     {
       name: "영탉",
-      Ename: "Young-tak",
+      Ename: "Yeong Chicken",
       image: b11Img,
       detail: "닭 요리 스페셜리스트이자 남영동의 남영탉 오너 셰프",
       Edetail:
@@ -151,7 +151,7 @@ export const blackData = {
     },
     {
       name: "요리하는돌아이",
-      Ename: "Crazy Cooking Guy",
+      Ename: "Cooking Maniac",
       image: b12Img,
       detail: "본업을 시작하는 순간 돌아이가 된다. 현 다이닝바 디핀 헤드 셰프",
       Edetail:
@@ -176,7 +176,7 @@ export const blackData = {
     },
     {
       name: "이모카세 1호",
-      Ename: "Imokase No.1",
+      Ename: "Auntie Omakase #1",
       image: b14Img,
       detail:
         "이모카세로 유명한 즐거운 술상과 경동시장 대표 맛집 안동집 손칼국시 운영",
@@ -189,7 +189,7 @@ export const blackData = {
     },
     {
       name: "장사천재 조사장",
-      Ename: "Business Genius Cho",
+      Ename: "Genius Restaurateur",
       image: b15Img,
       detail: "을지로의 숨겨진 보석, 한식 다이닝 보석  운영",
       Edetail:
@@ -206,12 +206,12 @@ export const blackData = {
       detail: "중식 대가 여경래 셰프의 수제자, 전 홍보각  셰프",
       Edetail:
         "A protégé of Chef Yeong-rye Lee, a master of Chinese cuisine, and former chef at Hongbogak.",
-      restaurant: "",
-      Erestaurant: "",
+      restaurant: "https://www.youtube.com/@yeogane",
+      Erestaurant: "https://www.youtube.com/@yeogane",
     },
     {
       name: "철가방 요리사",
-      Ename: "Iron Delivery Chef",
+      Ename: "Self-Made Chef",
       image: b17Img,
       detail:
         "고등학교 1학년 철가방 배달부터 시작한 중식계의 강자, 현 도량 오너 셰프",
@@ -224,7 +224,7 @@ export const blackData = {
     },
     {
       name: "키친갱스터",
-      Ename: "Kitchen Gangster",
+      Ename: "Kitchen Boss",
       image: b18Img,
       detail: "바스트로 겸 와인바 나우의 오너 셰프",
       Edetail: "Owner-chef of Bistro and Wine Bar, NOW.",

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import "./FeedbackModal.css";
+import axios from "axios";
 
 export default function EFeedbackModal() {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [feedback, setFeedback] = useState("");
 
@@ -13,7 +15,7 @@ export default function EFeedbackModal() {
         window.innerWidth - document.documentElement.clientWidth;
       document.body.style.overflow = "hidden";
       document.body.style.paddingRight = `${scrollBarWidth}px`;
-    }, 3000);
+    }, 30000);
 
     return () => {
       clearTimeout(timer);
@@ -22,7 +24,9 @@ export default function EFeedbackModal() {
 
   const handleFeedback = (e) => {
     e.preventDefault();
-    console.log("Feedback:", feedback);
+    axios.post(`${API_URL}/api/v1/feedbacks/`, {
+      feedback,
+    });
     setFeedback("");
     setIsModalOpen(false);
   };
