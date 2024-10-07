@@ -56,8 +56,8 @@ export const blackData = {
       detail: "15년 경력의 경남 양산 하북초등학교 급식 조리사",
       Edetail:
         "A school meal chef with 15 years of experience at Habuk Elementary School in Yangsan, Gyeongnam.",
-      restaurant: "",
-      Erestaurant: "",
+      restaurant: "https://www.youtube.com/@SchoolChef",
+      Erestaurant: "https://www.youtube.com/@SchoolChef",
     },
     {
       name: "나폴리 맛피아",
@@ -206,8 +206,8 @@ export const blackData = {
       detail: "중식 대가 여경래 셰프의 수제자, 전 홍보각  셰프",
       Edetail:
         "A protégé of Chef Yeong-rye Lee, a master of Chinese cuisine, and former chef at Hongbogak.",
-      restaurant: "",
-      Erestaurant: "",
+      restaurant: "https://www.youtube.com/@yeogane",
+      Erestaurant: "https://www.youtube.com/@yeogane",
     },
     {
       name: "철가방 요리사",
