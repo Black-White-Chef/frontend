@@ -15,7 +15,7 @@ export default function FeedbackModal() {
         window.innerWidth - document.documentElement.clientWidth;
       document.body.style.overflow = "hidden";
       document.body.style.paddingRight = `${scrollBarWidth}px`;
-    }, 3000);
+    }, 30000);
 
     return () => {
       clearTimeout(timer);
@@ -25,7 +25,7 @@ export default function FeedbackModal() {
   const handleFeedback = (e) => {
     e.preventDefault();
 
-    axios.post(`${API_URL}/feedbacks/`, {
+    axios.post(`${API_URL}/api/v1/feedbacks/`, {
       feedback,
     });
     setFeedback("");

@@ -31,7 +31,7 @@ export default function Modal() {
           setIsDisabled(true); // 성공 시 버튼 비활성화
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => alert(err.response.data.error));
   };
 
   // 응원 메세지 생성 함수
@@ -41,7 +41,7 @@ export default function Modal() {
     console.log("Comment:", comment);
 
     axios
-      .post(`${API_URL}/api/v1/nicknames/`, {
+      .post(`${API_URL}/api/v1/comments/`, {
         nickname,
         comment_text: comment,
       })
@@ -70,7 +70,7 @@ export default function Modal() {
         setNickname("");
         setComment("");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => alert(err.response.data.nickname));
 
     // post 성공해야지 모달 내리고, input 내용 초기화
     // 갑자기 든 생각은 nickname으로 '닉네임 생성' 하고 댓글 생성할 때도 nickname으로 '댓글 생성'
@@ -102,7 +102,6 @@ export default function Modal() {
               variant="outlined"
               size="small"
               onChange={(e) => setIsNickname(e.target.value)}
-              disabled={isDisabled} // 입력 필드 비활성화 상태 관리
               required
             />
             <Button
@@ -121,6 +120,7 @@ export default function Modal() {
               label="Nickname"
               multiline
               size="small"
+              value={nickname}
               onChange={(e) => setNickname(e.target.value)}
               slotProps={{
                 input: {
@@ -140,9 +140,10 @@ export default function Modal() {
               label="Comments"
               multiline
               rows={4}
-              defaultValue=""
+              // defaultValue=""
               variant="filled"
               placeholder="Comments"
+              value={comment}
               onChange={(e) => setComment(e.target.value)}
               required
             />
